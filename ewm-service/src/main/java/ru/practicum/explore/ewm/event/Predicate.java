@@ -2,8 +2,6 @@ package ru.practicum.explore.ewm.event;
 
 import com.querydsl.core.types.dsl.BooleanExpression;
 import lombok.experimental.UtilityClass;
-import org.springframework.data.domain.Sort;
-import ru.practicum.explore.ewm.event.QEvent;
 import ru.practicum.explore.ewm.event.enums.EventState;
 
 import java.time.LocalDateTime;
@@ -13,8 +11,7 @@ import java.util.Set;
 
 import static java.util.Optional.empty;
 import static java.util.stream.Collectors.toSet;
-import static ru.practicum.explore.ewm.event.EventMapper.toLocalDateTime;
-import static ru.practicum.explore.ewm.event.enums.EventSort.*;
+import static ru.practicum.explore.ewm.utility.ConverterLocalDateTime.toLocalDateTime;
 
 @UtilityClass
 public class Predicate {

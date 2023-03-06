@@ -26,7 +26,7 @@ public class NewEventDto {
 
     @NotNull(message = "Field: eventDate. Error: must not be blank. Value: null")
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime eventDate;
 
     @NotNull(message = "Field: location. Error: must not be blank. Value: null")

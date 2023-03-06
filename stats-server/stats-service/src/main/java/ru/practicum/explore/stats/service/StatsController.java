@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.explore.stats.service.service.StatsService;
 import ru.practicum.explore.stats.dto.StatsInnerDto;
 import ru.practicum.explore.stats.dto.StatsOuterDto;
 
@@ -37,6 +36,5 @@ public class StatsController {
                 start, end, Arrays.toString(uris), unique), "no");
         return statsService.getStats(toLocalDateTime(start), toLocalDateTime(end), uris, unique);
     }
-
 }
 

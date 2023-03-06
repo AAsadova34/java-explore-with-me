@@ -7,20 +7,13 @@ import ru.practicum.explore.ewm.event.dto.EventShortDto;
 import ru.practicum.explore.ewm.event.dto.NewEventDto;
 import ru.practicum.explore.ewm.event.enums.EventState;
 import ru.practicum.explore.ewm.event.location.Location;
-import ru.practicum.explore.ewm.exception.ValidationException;
 import ru.practicum.explore.ewm.user.User;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 
 import static ru.practicum.explore.ewm.category.CategoryMapper.toCategoryDto;
 import static ru.practicum.explore.ewm.user.UserMapper.toUserShortDto;
 
 @UtilityClass
 public class EventMapper {
-
-    public static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public static Event toEvent(NewEventDto newEventDto, Category category,
                                 User initiator, Location location, EventState state) {
@@ -70,15 +63,4 @@ public class EventMapper {
                 .setTitle(event.getTitle())
                 .setViews(event.getViews());
     }
-
-    public static LocalDateTime toLocalDateTime(String strDataTime) {
-        LocalDateTime localDateTime;
-        try {
-            localDateTime = LocalDateTime.parse(strDataTime, FORMATTER);
-        } catch (DateTimeParseException e) {
-            throw new ValidationException(e.getMessage());
-        }
-        return localDateTime;
-    }
-
 }

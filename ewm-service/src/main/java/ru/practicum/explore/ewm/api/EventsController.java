@@ -17,14 +17,14 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
-import static ru.practicum.explore.ewm.event.EventMapper.FORMATTER;
+import static ru.practicum.explore.ewm.utility.ConverterLocalDateTime.CUSTOM_FORMATTER;
 import static ru.practicum.explore.ewm.utility.Logger.logRequest;
 
 @RestController
 @RequestMapping("/events")
 @RequiredArgsConstructor
 public class EventsController {
-    public static final String NAME_SERVICE = "ewm-main-service";
+    public static final String NAME_SERVICE = "ewm-service";
 
     private final EventService eventService;
 
@@ -34,9 +34,7 @@ public class EventsController {
     public EventFullDto getEventByPublic(@PathVariable int id, HttpServletRequest request) {
         logRequest(HttpMethod.GET, String.format("/events/%s", id), "no");
 
-        StatsInnerDto statsInnerDto = new StatsInnerDto(NAME_SERVICE, request.getRequestURL().toString(),
-                request.getRemoteAddr(), LocalDateTime.now().format(FORMATTER));
-        statsClient.addStats(statsInnerDto);
+        sendStatistics(request);
 
         return eventService.getEventByPublic(id);
     }
@@ -57,12 +55,15 @@ public class EventsController {
                 onlyAvailable, sort, from, size);
         logRequest(HttpMethod.GET, url, "no");
 
-        StatsInnerDto statsInnerDto = new StatsInnerDto(NAME_SERVICE, request.getRequestURL().toString(),
-                request.getRemoteAddr(), LocalDateTime.now().format(FORMATTER));
-        statsClient.addStats(statsInnerDto);
+        sendStatistics(request);
 
         return eventService.getEventsByPublic(text, categories, paid, rangeStart, rangeEnd, onlyAvailable,
                 sort, from, size);
     }
 
+    private void sendStatistics(HttpServletRequest request) {
+        StatsInnerDto statsInnerDto = new StatsInnerDto(NAME_SERVICE, request.getRequestURI(),
+                request.getRemoteAddr(), LocalDateTime.now().format(CUSTOM_FORMATTER));
+        statsClient.addStats(statsInnerDto);
+    }
 }

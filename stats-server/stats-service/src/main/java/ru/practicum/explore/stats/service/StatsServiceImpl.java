@@ -1,11 +1,10 @@
-package ru.practicum.explore.stats.service.service;
+package ru.practicum.explore.stats.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.practicum.explore.stats.service.Stats;
+import org.springframework.transaction.annotation.Transactional;
 import ru.practicum.explore.stats.dto.StatsInnerDto;
 import ru.practicum.explore.stats.dto.StatsOuterDto;
-import ru.practicum.explore.stats.service.StatsRepository;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -19,6 +18,7 @@ public class StatsServiceImpl implements StatsService {
 
     private final StatsRepository statsRepository;
 
+    @Transactional
     @Override
     public void addStats(StatsInnerDto statsInnerDto) {
         Stats stats = toStats(statsInnerDto);
@@ -26,6 +26,7 @@ public class StatsServiceImpl implements StatsService {
         logStorageChanges("Add stats", statsStorage.toString());
     }
 
+    @Transactional
     @Override
     public List<StatsOuterDto> getStats(LocalDateTime start, LocalDateTime end, String[] uris, boolean unique) {
         List<StatsOuterDto> options;

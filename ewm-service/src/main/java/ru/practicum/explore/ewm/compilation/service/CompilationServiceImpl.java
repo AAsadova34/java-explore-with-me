@@ -24,7 +24,6 @@ import static ru.practicum.explore.ewm.compilation.CompilationMapper.toCompilati
 import static ru.practicum.explore.ewm.compilation.CompilationMapper.toCompilationDto;
 import static ru.practicum.explore.ewm.utility.Logger.logStorageChanges;
 
-
 @Service
 @RequiredArgsConstructor
 public class CompilationServiceImpl implements CompilationService {
