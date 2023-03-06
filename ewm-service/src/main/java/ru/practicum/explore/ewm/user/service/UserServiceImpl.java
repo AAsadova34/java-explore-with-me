@@ -1,6 +1,7 @@
 package ru.practicum.explore.ewm.user.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,6 @@ import ru.practicum.explore.ewm.user.User;
 import ru.practicum.explore.ewm.user.UserRepository;
 import ru.practicum.explore.ewm.user.dto.UserDto;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.Set;
 
@@ -52,7 +52,7 @@ public class UserServiceImpl implements ru.practicum.explore.ewm.user.service.Us
     public void deleteUser(int userId) {
         try {
             userRepository.deleteById(userId);
-        } catch (EntityNotFoundException e) {
+        } catch (EmptyResultDataAccessException e) {
             throw new NotFoundException(String.format("User with id=%s was not found.", userId));
         }
 

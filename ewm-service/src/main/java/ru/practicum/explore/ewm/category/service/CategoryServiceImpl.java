@@ -1,6 +1,7 @@
 package ru.practicum.explore.ewm.category.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,6 @@ import ru.practicum.explore.ewm.category.CategoryDto;
 import ru.practicum.explore.ewm.category.CategoryRepository;
 import ru.practicum.explore.ewm.exception.NotFoundException;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 import static ru.practicum.explore.ewm.utility.Logger.logStorageChanges;
@@ -37,7 +37,7 @@ public class CategoryServiceImpl implements CategoryService {
     public void delCategory(int catId) {
         try {
             catRepository.deleteById(catId);
-        } catch (EntityNotFoundException e) {
+        } catch (EmptyResultDataAccessException e) {
             throw new NotFoundException(String.format("Category with id=%s was not found.", catId));
         }
         logStorageChanges("Delete", String.format("Category with id %s", catId));

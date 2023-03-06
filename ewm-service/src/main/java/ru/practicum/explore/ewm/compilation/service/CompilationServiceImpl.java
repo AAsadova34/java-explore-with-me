@@ -1,6 +1,7 @@
 package ru.practicum.explore.ewm.compilation.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,6 @@ import ru.practicum.explore.ewm.event.Event;
 import ru.practicum.explore.ewm.event.service.EventService;
 import ru.practicum.explore.ewm.exception.NotFoundException;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -52,7 +52,7 @@ public class CompilationServiceImpl implements CompilationService {
     public void delCompilation(int compId) {
         try {
             compRepository.deleteById(compId);
-        } catch (EntityNotFoundException e) {
+        } catch (EmptyResultDataAccessException e) {
             throw new NotFoundException(String.format("Compilation with id=%s was not found.", compId));
         }
         logStorageChanges("Delete", String.format("Compilation with id %s", compId));
