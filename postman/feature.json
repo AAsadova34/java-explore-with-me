@@ -19,7 +19,7 @@
 							"\r",
 							"pm.test(\"Test create category\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.id, '\"id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.id, '\"id\" field').to.eql(55);\r",
 							"    pm.expect(jsonData.name, '\"name\" field').to.eql('Category_1');\r",
 							"});"
 						],
@@ -75,7 +75,7 @@
 							"});\r",
 							"pm.test(\"Test create user\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.id, '\"id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.id, '\"id\" field').to.eql(63);\r",
 							"    pm.expect(jsonData.email, '\"email\" field').to.eql('user_1@user.com');\r",
 							"    pm.expect(jsonData.name, '\"name\" field').to.eql('user_1');\r",
 							"});"
@@ -127,7 +127,7 @@
 							"});\r",
 							"pm.test(\"Test create user\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.id, '\"id\" field').to.eql(2);\r",
+							"    pm.expect(jsonData.id, '\"id\" field').to.eql(64);\r",
 							"    pm.expect(jsonData.email, '\"email\" field').to.eql('user_2@user.com');\r",
 							"    pm.expect(jsonData.name, '\"name\" field').to.eql('user_2');\r",
 							"});"
@@ -224,7 +224,7 @@
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -244,8 +244,8 @@
 							"\r",
 							"pm.test(\"Test create event\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.id, '\"id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.category.id, '\"category.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.id, '\"id\" field').to.eql(38);\r",
+							"    pm.expect(jsonData.category.id, '\"category.id\" field').to.eql(55);\r",
 							"    pm.expect(jsonData.state, '\"state\" field').to.eql('PENDING');\r",
 							"});"
 						],
@@ -269,7 +269,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"annotation\": \"Event_1. Sed similique exercitationem voluptas occaecati pariatur. Sint fugiat blanditiis ex iusto sint porro. Vel consequuntur ut totam quo.\",\r\n    \"category\": \"1\",\r\n    \"description\": \"Event_1. Deleniti et sunt consequuntur animi quod ea cupiditate. Dolorem rerum impedit occaecati quo mollitia magni iusto. Et molestiae voluptatum fugit repellendus quo assumenda enim ipsum culpa.\\n \\rVoluptatum alias aut ea molestiae. Odio vitae et eos qui nemo. Aspernatur minima architecto animi animi odio atque.\\n \\rEos ut quae ex nihil vero dolorem fuga ex. Magni doloribus reprehenderit. Ullam est quaerat ut dolor et. Veritatis voluptates voluptatem tempore blanditiis est. Qui minima harum distinctio est aut eos ut consequatur veniam. Quibusdam nihil accusamus.\",\r\n    \"eventDate\" : \"2035-03-07 20:17:46\",\r\n    \"location\": {\r\n        \"lat\": -59.3985,\r\n        \"lon\": -113.1142\r\n    },\r\n    \"paid\": false,\r\n    \"participantLimit\": 0,\r\n    \"requestModeration\": false,\r\n    \"title\": \"Event_1. Qui quo aut.\"\r\n}"
+					"raw": "{\r\n    \"annotation\": \"Event_1. Sed similique exercitationem voluptas occaecati pariatur. Sint fugiat blanditiis ex iusto sint porro. Vel consequuntur ut totam quo.\",\r\n    \"category\": \"55\",\r\n    \"description\": \"Event_1. Deleniti et sunt consequuntur animi quod ea cupiditate. Dolorem rerum impedit occaecati quo mollitia magni iusto. Et molestiae voluptatum fugit repellendus quo assumenda enim ipsum culpa.\\n \\rVoluptatum alias aut ea molestiae. Odio vitae et eos qui nemo. Aspernatur minima architecto animi animi odio atque.\\n \\rEos ut quae ex nihil vero dolorem fuga ex. Magni doloribus reprehenderit. Ullam est quaerat ut dolor et. Veritatis voluptates voluptatem tempore blanditiis est. Qui minima harum distinctio est aut eos ut consequatur veniam. Quibusdam nihil accusamus.\",\r\n    \"eventDate\" : \"2035-03-07 20:17:46\",\r\n    \"location\": {\r\n        \"lat\": -59.3985,\r\n        \"lon\": -113.1142\r\n    },\r\n    \"paid\": false,\r\n    \"participantLimit\": 0,\r\n    \"requestModeration\": false,\r\n    \"title\": \"Event_1. Qui quo aut.\"\r\n}"
 				},
 				"url": {
 					"raw": "{{baseUrl}}/users/:userId/events",
@@ -284,7 +284,7 @@
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -304,8 +304,8 @@
 							"\r",
 							"pm.test(\"Test create event\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.id, '\"id\" field').to.eql(2);\r",
-							"    pm.expect(jsonData.category.id, '\"category.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.id, '\"id\" field').to.eql(39);\r",
+							"    pm.expect(jsonData.category.id, '\"category.id\" field').to.eql(55);\r",
 							"    pm.expect(jsonData.state, '\"state\" field').to.eql('PENDING');\r",
 							"});"
 						],
@@ -329,7 +329,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"annotation\": \"Event_2. Sed similique exercitationem voluptas occaecati pariatur. Sint fugiat blanditiis ex iusto sint porro. Vel consequuntur ut totam quo.\",\r\n    \"category\": \"1\",\r\n    \"description\": \"Event_2. Deleniti et sunt consequuntur animi quod ea cupiditate. Dolorem rerum impedit occaecati quo mollitia magni iusto. Et molestiae voluptatum fugit repellendus quo assumenda enim ipsum culpa.\\n \\rVoluptatum alias aut ea molestiae. Odio vitae et eos qui nemo. Aspernatur minima architecto animi animi odio atque.\\n \\rEos ut quae ex nihil vero dolorem fuga ex. Magni doloribus reprehenderit. Ullam est quaerat ut dolor et. Veritatis voluptates voluptatem tempore blanditiis est. Qui minima harum distinctio est aut eos ut consequatur veniam. Quibusdam nihil accusamus.\",\r\n    \"eventDate\" : \"2035-03-07 20:17:46\",\r\n    \"location\": {\r\n        \"lat\": -59.3985,\r\n        \"lon\": -113.1142\r\n    },\r\n    \"paid\": false,\r\n    \"participantLimit\": 0,\r\n    \"requestModeration\": false,\r\n    \"title\": \"Event_2. Qui quo aut.\"\r\n}"
+					"raw": "{\r\n    \"annotation\": \"Event_2. Sed similique exercitationem voluptas occaecati pariatur. Sint fugiat blanditiis ex iusto sint porro. Vel consequuntur ut totam quo.\",\r\n    \"category\": \"55\",\r\n    \"description\": \"Event_2. Deleniti et sunt consequuntur animi quod ea cupiditate. Dolorem rerum impedit occaecati quo mollitia magni iusto. Et molestiae voluptatum fugit repellendus quo assumenda enim ipsum culpa.\\n \\rVoluptatum alias aut ea molestiae. Odio vitae et eos qui nemo. Aspernatur minima architecto animi animi odio atque.\\n \\rEos ut quae ex nihil vero dolorem fuga ex. Magni doloribus reprehenderit. Ullam est quaerat ut dolor et. Veritatis voluptates voluptatem tempore blanditiis est. Qui minima harum distinctio est aut eos ut consequatur veniam. Quibusdam nihil accusamus.\",\r\n    \"eventDate\" : \"2035-03-07 20:17:46\",\r\n    \"location\": {\r\n        \"lat\": -59.3985,\r\n        \"lon\": -113.1142\r\n    },\r\n    \"paid\": false,\r\n    \"participantLimit\": 0,\r\n    \"requestModeration\": false,\r\n    \"title\": \"Event_2. Qui quo aut.\"\r\n}"
 				},
 				"url": {
 					"raw": "{{baseUrl}}/users/:userId/events",
@@ -344,7 +344,7 @@
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -390,7 +390,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=1",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=38",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -402,7 +402,7 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					],
 					"variable": [
@@ -454,7 +454,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=1",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=38",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -466,13 +466,13 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					],
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -492,8 +492,8 @@
 							"\r",
 							"pm.test(\"Test update event\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.id, '\"id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.category.id, '\"category.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.id, '\"id\" field').to.eql(38);\r",
+							"    pm.expect(jsonData.category.id, '\"category.id\" field').to.eql(55);\r",
 							"    pm.expect(jsonData.state, '\"state\" field').to.eql('PUBLISHED');\r",
 							"});"
 						],
@@ -517,7 +517,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"annotation\": \"Sed similique exercitationem voluptas occaecati pariatur. Sint fugiat blanditiis ex iusto sint porro. Vel consequuntur ut totam quo.\",\r\n    \"category\": \"1\",\r\n    \"description\": \"Deleniti et sunt consequuntur animi quod ea cupiditate. Dolorem rerum impedit occaecati quo mollitia magni iusto. Et molestiae voluptatum fugit repellendus quo assumenda enim ipsum culpa.\\n \\rVoluptatum alias aut ea molestiae. Odio vitae et eos qui nemo. Aspernatur minima architecto animi animi odio atque.\\n \\rEos ut quae ex nihil vero dolorem fuga ex. Magni doloribus reprehenderit. Ullam est quaerat ut dolor et. Veritatis voluptates voluptatem tempore blanditiis est. Qui minima harum distinctio est aut eos ut consequatur veniam. Quibusdam nihil accusamus.\",\r\n    \"eventDate\" : \"2035-03-07 20:17:46\",\r\n    \"location\": {\r\n        \"lat\": -59.3985,\r\n        \"lon\": -113.1142\r\n    },\r\n    \"paid\": false,\r\n    \"participantLimit\": 0,\r\n    \"requestModeration\": false,\r\n    \"stateAction\": \"PUBLISH_EVENT\",\r\n    \"title\": \"Qui quo aut.\"\r\n}"
+					"raw": "{\r\n    \"annotation\": \"Sed similique exercitationem voluptas occaecati pariatur. Sint fugiat blanditiis ex iusto sint porro. Vel consequuntur ut totam quo.\",\r\n    \"category\": \"55\",\r\n    \"description\": \"Deleniti et sunt consequuntur animi quod ea cupiditate. Dolorem rerum impedit occaecati quo mollitia magni iusto. Et molestiae voluptatum fugit repellendus quo assumenda enim ipsum culpa.\\n \\rVoluptatum alias aut ea molestiae. Odio vitae et eos qui nemo. Aspernatur minima architecto animi animi odio atque.\\n \\rEos ut quae ex nihil vero dolorem fuga ex. Magni doloribus reprehenderit. Ullam est quaerat ut dolor et. Veritatis voluptates voluptatem tempore blanditiis est. Qui minima harum distinctio est aut eos ut consequatur veniam. Quibusdam nihil accusamus.\",\r\n    \"eventDate\" : \"2035-03-07 20:17:46\",\r\n    \"location\": {\r\n        \"lat\": -59.3985,\r\n        \"lon\": -113.1142\r\n    },\r\n    \"paid\": false,\r\n    \"participantLimit\": 0,\r\n    \"requestModeration\": false,\r\n    \"stateAction\": \"PUBLISH_EVENT\",\r\n    \"title\": \"Qui quo aut.\"\r\n}"
 				},
 				"url": {
 					"raw": "{{baseUrl}}/admin/events/:eventId",
@@ -532,7 +532,7 @@
 					"variable": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					]
 				}
@@ -552,8 +552,8 @@
 							"\r",
 							"pm.test(\"Test update event\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.id, '\"id\" field').to.eql(2);\r",
-							"    pm.expect(jsonData.category.id, '\"category.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.id, '\"id\" field').to.eql(39);\r",
+							"    pm.expect(jsonData.category.id, '\"category.id\" field').to.eql(55);\r",
 							"    pm.expect(jsonData.state, '\"state\" field').to.eql('PUBLISHED');\r",
 							"});"
 						],
@@ -577,7 +577,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"annotation\": \"Event_2. Sed similique exercitationem voluptas occaecati pariatur. Sint fugiat blanditiis ex iusto sint porro. Vel consequuntur ut totam quo.\",\r\n    \"category\": \"1\",\r\n    \"description\": \"Event_2. Deleniti et sunt consequuntur animi quod ea cupiditate. Dolorem rerum impedit occaecati quo mollitia magni iusto. Et molestiae voluptatum fugit repellendus quo assumenda enim ipsum culpa.\\n \\rVoluptatum alias aut ea molestiae. Odio vitae et eos qui nemo. Aspernatur minima architecto animi animi odio atque.\\n \\rEos ut quae ex nihil vero dolorem fuga ex. Magni doloribus reprehenderit. Ullam est quaerat ut dolor et. Veritatis voluptates voluptatem tempore blanditiis est. Qui minima harum distinctio est aut eos ut consequatur veniam. Quibusdam nihil accusamus.\",\r\n    \"eventDate\" : \"2035-03-07 20:17:46\",\r\n    \"location\": {\r\n        \"lat\": -59.3985,\r\n        \"lon\": -113.1142\r\n    },\r\n    \"paid\": false,\r\n    \"participantLimit\": 0,\r\n    \"requestModeration\": false,\r\n    \"stateAction\": \"PUBLISH_EVENT\",\r\n    \"title\": \"Event_2. Qui quo aut.\"\r\n}"
+					"raw": "{\r\n    \"annotation\": \"Event_2. Sed similique exercitationem voluptas occaecati pariatur. Sint fugiat blanditiis ex iusto sint porro. Vel consequuntur ut totam quo.\",\r\n    \"category\": \"55\",\r\n    \"description\": \"Event_2. Deleniti et sunt consequuntur animi quod ea cupiditate. Dolorem rerum impedit occaecati quo mollitia magni iusto. Et molestiae voluptatum fugit repellendus quo assumenda enim ipsum culpa.\\n \\rVoluptatum alias aut ea molestiae. Odio vitae et eos qui nemo. Aspernatur minima architecto animi animi odio atque.\\n \\rEos ut quae ex nihil vero dolorem fuga ex. Magni doloribus reprehenderit. Ullam est quaerat ut dolor et. Veritatis voluptates voluptatem tempore blanditiis est. Qui minima harum distinctio est aut eos ut consequatur veniam. Quibusdam nihil accusamus.\",\r\n    \"eventDate\" : \"2035-03-07 20:17:46\",\r\n    \"location\": {\r\n        \"lat\": -59.3985,\r\n        \"lon\": -113.1142\r\n    },\r\n    \"paid\": false,\r\n    \"participantLimit\": 0,\r\n    \"requestModeration\": false,\r\n    \"stateAction\": \"PUBLISH_EVENT\",\r\n    \"title\": \"Event_2. Qui quo aut.\"\r\n}"
 				},
 				"url": {
 					"raw": "{{baseUrl}}/admin/events/:eventId",
@@ -592,7 +592,7 @@
 					"variable": [
 						{
 							"key": "eventId",
-							"value": "2"
+							"value": "39"
 						}
 					]
 				}
@@ -613,8 +613,8 @@
 							"pm.test(\"Test create comment\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id, '\"id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(38);\r",
+							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(63);\r",
 							"    pm.expect(jsonData.text, '\"text\" field').to.eql('Event comment_1.');\r",
 							"    pm.expect(jsonData.redaction, '\"redaction\" field').to.eql(false);\r",
 							"    pm.expect(jsonData.created, '\"created\" field').is.not.null;\r",
@@ -648,7 +648,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=1",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=38",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -660,13 +660,13 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					],
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -687,8 +687,8 @@
 							"pm.test(\"Test create comment\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id, '\"id\" field').to.eql(2);\r",
-							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(2);\r",
-							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(39);\r",
+							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(63);\r",
 							"    pm.expect(jsonData.text, '\"text\" field').to.eql('Event comment_2.');\r",
 							"    pm.expect(jsonData.redaction, '\"redaction\" field').to.eql(false);\r",
 							"    pm.expect(jsonData.created, '\"created\" field').is.not.null;\r",
@@ -722,7 +722,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=2",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=39",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -734,13 +734,13 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "2"
+							"value": "39"
 						}
 					],
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -761,8 +761,8 @@
 							"pm.test(\"Test create comment\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id, '\"id\" field').to.eql(3);\r",
-							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(2);\r",
+							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(38);\r",
+							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(64);\r",
 							"    pm.expect(jsonData.text, '\"text\" field').to.eql('Event comment_3.');\r",
 							"    pm.expect(jsonData.redaction, '\"redaction\" field').to.eql(false);\r",
 							"    pm.expect(jsonData.created, '\"created\" field').is.not.null;\r",
@@ -796,7 +796,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=1",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=38",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -808,13 +808,13 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					],
 					"variable": [
 						{
 							"key": "userId",
-							"value": "2"
+							"value": "64"
 						}
 					]
 				}
@@ -873,7 +873,7 @@
 					"variable": [
 						{
 							"key": "userId",
-							"value": "2"
+							"value": "64"
 						},
 						{
 							"key": "commentId",
@@ -898,8 +898,8 @@
 							"pm.test(\"Test update comment\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id, '\"id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(38);\r",
+							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(63);\r",
 							"    pm.expect(jsonData.text, '\"text\" field').to.eql('Update event comment_1.');\r",
 							"    pm.expect(jsonData.redaction, '\"redaction\" field').to.eql(true);\r",
 							"    pm.expect(jsonData.created, '\"created\" field').is.not.null;\r",
@@ -946,7 +946,7 @@
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						},
 						{
 							"key": "commentId",
@@ -1006,7 +1006,7 @@
 					"variable": [
 						{
 							"key": "userId",
-							"value": "2"
+							"value": "64"
 						}
 					]
 				}
@@ -1063,7 +1063,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "1"
+							"value": "38"
 						}
 					]
 				}
@@ -1113,7 +1113,7 @@
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						},
 						{
 							"key": "commentId",
@@ -1167,7 +1167,7 @@
 					"variable": [
 						{
 							"key": "userId",
-							"value": "2"
+							"value": "64"
 						},
 						{
 							"key": "commentId",
@@ -1241,8 +1241,8 @@
 							"pm.test(\"Test create comment\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id, '\"id\" field').to.eql(4);\r",
-							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(38);\r",
+							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(63);\r",
 							"    pm.expect(jsonData.text, '\"text\" field').to.eql('Event comment_2.');\r",
 							"    pm.expect(jsonData.redaction, '\"redaction\" field').to.eql(false);\r",
 							"    pm.expect(jsonData.created, '\"created\" field').is.not.null;\r",
@@ -1276,7 +1276,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=1",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=38",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -1288,13 +1288,13 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					],
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -1315,8 +1315,8 @@
 							"pm.test(\"Test create comment\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id, '\"id\" field').to.eql(5);\r",
-							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(38);\r",
+							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(63);\r",
 							"    pm.expect(jsonData.text, '\"text\" field').to.eql('Event comment_2.');\r",
 							"    pm.expect(jsonData.redaction, '\"redaction\" field').to.eql(false);\r",
 							"    pm.expect(jsonData.created, '\"created\" field').is.not.null;\r",
@@ -1350,7 +1350,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=1",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=38",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -1362,13 +1362,13 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					],
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -1389,8 +1389,8 @@
 							"pm.test(\"Test create comment\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id, '\"id\" field').to.eql(6);\r",
-							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(38);\r",
+							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(63);\r",
 							"    pm.expect(jsonData.text, '\"text\" field').to.eql('Event comment_2.');\r",
 							"    pm.expect(jsonData.redaction, '\"redaction\" field').to.eql(false);\r",
 							"    pm.expect(jsonData.created, '\"created\" field').is.not.null;\r",
@@ -1424,7 +1424,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=1",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=38",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -1436,13 +1436,13 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					],
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -1463,8 +1463,8 @@
 							"pm.test(\"Test create comment\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id, '\"id\" field').to.eql(7);\r",
-							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(38);\r",
+							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(63);\r",
 							"    pm.expect(jsonData.text, '\"text\" field').to.eql('Event comment_2.');\r",
 							"    pm.expect(jsonData.redaction, '\"redaction\" field').to.eql(false);\r",
 							"    pm.expect(jsonData.created, '\"created\" field').is.not.null;\r",
@@ -1498,7 +1498,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=1",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=38",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -1510,13 +1510,13 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					],
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -1562,7 +1562,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=1",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=38",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -1574,13 +1574,13 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					],
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -1601,8 +1601,8 @@
 							"pm.test(\"Test create comment\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.id, '\"id\" field').to.eql(8);\r",
-							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(1);\r",
-							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(1);\r",
+							"    pm.expect(jsonData.event.id, '\"event.id\" field').to.eql(38);\r",
+							"    pm.expect(jsonData.user.id, '\"user.id\" field').to.eql(63);\r",
 							"    pm.expect(jsonData.text, '\"text\" field').to.eql('Unicum event comment.');\r",
 							"    pm.expect(jsonData.redaction, '\"redaction\" field').to.eql(false);\r",
 							"    pm.expect(jsonData.created, '\"created\" field').is.not.null;\r",
@@ -1636,7 +1636,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/users/:userId/comments?eventId=1",
+					"raw": "{{baseUrl}}/users/:userId/comments?eventId=38",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -1648,13 +1648,13 @@
 					"query": [
 						{
 							"key": "eventId",
-							"value": "1"
+							"value": "38"
 						}
 					],
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}
@@ -1708,7 +1708,7 @@
 					"variable": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "63"
 						}
 					]
 				}

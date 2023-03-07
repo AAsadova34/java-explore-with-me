@@ -37,3 +37,6 @@
     * доступно всем;
     * если комментарии отсутствуют возвращается пустой список;
     * сортировка по убыванию.
+
+## Ссылка на Pull requests:
+https://github.com/AAsadova34/java-explore-with-me/compare/feature_comments?expand=1
