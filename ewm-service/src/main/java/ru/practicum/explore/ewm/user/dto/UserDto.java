@@ -12,10 +12,10 @@ public class UserDto {
 
     private Integer id;
 
-    @NotBlank(message = "Field: email. Error: must not be blank. Value: null")
+    @NotBlank(message = "Field: email. Error: must not be blank.")
     @Email(message = "Field: email. Error: not valid")
     private String email;
 
-    @NotBlank(message = "Field: name. Error: must not be blank. Value: null")
+    @NotBlank(message = "Field: name. Error: must not be blank.")
     private String name;
 }

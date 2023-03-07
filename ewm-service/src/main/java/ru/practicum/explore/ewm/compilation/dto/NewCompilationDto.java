@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Data
@@ -14,7 +13,6 @@ public class NewCompilationDto {
 
     private Boolean pinned;
 
-    @NotNull
-    @NotBlank
+    @NotBlank(message = "Field: title. Error: must not be blank.")
     private String title;
 }

@@ -6,6 +6,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.practicum.explore.ewm.category.service.CategoryService;
 import ru.practicum.explore.ewm.category.CategoryDto;
+import ru.practicum.explore.ewm.comment.service.CommentService;
 import ru.practicum.explore.ewm.compilation.dto.CompilationDto;
 import ru.practicum.explore.ewm.compilation.dto.NewCompilationDto;
 import ru.practicum.explore.ewm.compilation.dto.UpdateCompilationDto;
@@ -39,6 +40,8 @@ public class AdminController {
     private final EventService eventService;
 
     private final CompilationService compService;
+
+    private final CommentService commentService;
 
     @PostMapping("/categories")
     @ResponseStatus(CREATED) //201
@@ -126,5 +129,12 @@ public class AdminController {
                                             @RequestBody UpdateCompilationDto compilationDto) {
         logRequest(HttpMethod.PATCH, String.format("/admin/compilations/%s", compId), compilationDto.toString());
         return compService.updateCompilation(compId, compilationDto);
+    }
+
+    @DeleteMapping("/comments/{commentId}")
+    @ResponseStatus(NO_CONTENT) //204
+    public void delCommentByAdmin(@PathVariable int commentId) {
+        logRequest(HttpMethod.DELETE, String.format("admin/comments/%s", commentId), "no");
+        commentService.delCommentByAdmin(commentId);
     }
 }

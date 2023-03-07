@@ -3,6 +3,8 @@ package ru.practicum.explore.ewm.api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.bind.annotation.*;
+import ru.practicum.explore.ewm.comment.dto.CommentDtoOut;
+import ru.practicum.explore.ewm.comment.service.CommentService;
 import ru.practicum.explore.ewm.event.dto.EventFullDto;
 import ru.practicum.explore.ewm.event.dto.EventShortDto;
 import ru.practicum.explore.ewm.event.service.EventService;
@@ -27,6 +29,8 @@ public class EventsController {
     public static final String NAME_SERVICE = "ewm-service";
 
     private final EventService eventService;
+
+    private final CommentService commentService;
 
     private final StatsClient statsClient;
 
@@ -59,6 +63,14 @@ public class EventsController {
 
         return eventService.getEventsByPublic(text, categories, paid, rangeStart, rangeEnd, onlyAvailable,
                 sort, from, size);
+    }
+
+    @GetMapping("/{id}/comments")
+    public List<CommentDtoOut> getCommentsByPublic(@PathVariable int id,
+                                                   @RequestParam(defaultValue = "0") @PositiveOrZero int from,
+                                                   @RequestParam(defaultValue = "10") @Positive int size) {
+        logRequest(HttpMethod.GET, String.format("events/%s/comments?from=%s&size=%s", id, from, size), "no");
+        return commentService.getCommentsByPublic(id, from, size);
     }
 
     private void sendStatistics(HttpServletRequest request) {

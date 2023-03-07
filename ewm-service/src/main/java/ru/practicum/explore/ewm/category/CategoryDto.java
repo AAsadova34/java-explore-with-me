@@ -10,6 +10,6 @@ import javax.validation.constraints.NotBlank;
 public class CategoryDto {
     private Integer id;
 
-    @NotBlank(message = "Field: name. Error: must not be blank. Value: null")
+    @NotBlank(message = "Field: name. Error: must not be blank.")
     private String name;
 }
